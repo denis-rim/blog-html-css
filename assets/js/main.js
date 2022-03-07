@@ -21,11 +21,37 @@ const scrollHeader = () => {
 
 window.addEventListener("scroll", scrollHeader);
 // Open menu & search pop-up
+const menuToggleIcon = selectElement("#menu-toggle-icon");
+
+const toggleMenu = () => {
+  const mobileElement = selectElement("#menu");
+  mobileElement.classList.toggle("activated");
+  menuToggleIcon.classList.toggle("activated");
+};
+
+menuToggleIcon.addEventListener("click", toggleMenu);
 
 // Open/Close search form popup
 
 // -- Close the search form popup on ESC keypress
 
 // Switch theme/add to local storage
+const bodyElement = document.body;
+const themeToggleBtn = selectElement("#theme-toggle-btn");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+  bodyElement.classList.add("light-theme");
+}
+
+themeToggleBtn.addEventListener("click", () => {
+  bodyElement.classList.toggle("light-theme");
+
+  if (bodyElement.classList.contains("light-theme")) {
+    localStorage.setItem("theme", "light-theme");
+  } else {
+    localStorage.removeItem("theme");
+  }
+});
 
 // Swiper
