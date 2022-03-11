@@ -461,8 +461,49 @@ body.light-theme {
 }
 
 /* Quick read */
+.section-title {
+  font-size: var(--font-size-md);
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.section-title:before {
+  content: attr(data-name);
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  opacity: 0.1;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
 
 /* Quick read - Swiper */
+.article.swiper-slide {
+  height: 40rem;
+}
+
+.swiper-wrapper {
+  height: auto;
+}
+
+.swiper-controls {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--secondary-background-color);
+}
+
+.swiper-controls::after {
+  font-size: 1.6rem;
+  color: var(--light-color);
+}
+
+.swiper-pagination {
+  bottom: .5rem; !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--light-color);
+}
 
 /* Older posts */
 
