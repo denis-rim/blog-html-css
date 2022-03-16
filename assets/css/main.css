@@ -636,7 +636,7 @@ font-size: var(--font-size-lg);
 
 /* Scrollbar styles */
 ::-webkit-scrollbar {
-  width: 1.5rem;
+  width: 1.25rem;
 }
 
 ::-webkit-scrollbar-track {
